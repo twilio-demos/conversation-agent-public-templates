@@ -11,15 +11,15 @@ Use this skill when a customer wants to move an existing appointment. The proced
 
 ## When to use
 
-Invoke when the customer asks to: reschedule, move, change time, push back, or bring forward an appointment. For cancellations, use the appointment-cancel skill.
+Invoke when the customer asks to: reschedule, move, change time, push back, or bring forward an appointment. For cancellations, use the [appointment-cancel procedure].
 
 ## Procedure
 
-1. Look up the customer's current appointment by phone number.
+1. Look up the customer's current appointment by phone number via the [customer.appointments.get tool].
 2. Ask the customer for their preferred new time. Offer 3 nearby slots if they are flexible.
-3. Validate the slot using the check-availability tool.
-4. Update the booking via the update-appointment tool.
-5. Send a confirmation SMS to the customer with the new date and time.
+3. Validate the slot using the [customer.appointments.list_slots tool].
+4. Update the booking via the [customer.appointments.reschedule tool].
+5. Send a confirmation SMS to the customer with the new date and time via the [twilio.apis.messages_create tool].
 6. Notify the assigned agent or technician via internal message.
 
 ## Edge cases
