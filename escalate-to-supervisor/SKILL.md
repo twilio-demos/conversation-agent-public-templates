@@ -24,7 +24,7 @@ Invoke when:
 3. Reassure the caller that this AI system can handle most requests directly, including refunds, account changes, scheduling, and FAQs. Be brief — one sentence.
 4. **Ask whether the caller still wants a human, or whether they'd like you to take another pass at the original request.** Wait for their answer before doing anything else.
 5. If they want to continue with the AI, route back conversationally — the router-observer will handle any swap back on the next turn if warranted. Just answer the question or take the action they describe in your next reply.
-6. If they still want a human, page the on-call queue via the customer.escalation.page tool with a one-paragraph summary that combines the recalled episodic context PLUS what the caller has said this turn. Send a holding SMS via the twilio.messaging.send tool with the case number returned by the page tool.
+6. If they still want a human, page the on-call queue via the [customer.escalation.page tool] with a one-paragraph summary that combines the recalled episodic context PLUS what the caller has said this turn. Send a holding SMS via the [twilio.apis.messages_create tool] with the case number returned by the page tool.
 
 ## Edge cases
 
